@@ -58,7 +58,7 @@ class ProductItem(scrapy.Item):
     customer_review = scrapy.Field(
         input_processor=MapCompose(remove_whitespace),
     )
-
+    related_products_url = scrapy.Field()
 
 
 class ProductItemMeta(scrapy.Item):

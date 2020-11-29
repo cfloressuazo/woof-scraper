@@ -4,4 +4,7 @@ Collection of scrapers for woofy. Crawling spiders to get information about food
 # Usage:
 1. create a python virtual environment
 2. install scrapy
-3. call the right spider
+3. call the right spider crawl. 
+```
+$ scrapy crawl tiendapet
+```
