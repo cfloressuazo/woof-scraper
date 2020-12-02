@@ -48,13 +48,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'woofy_one_tmp.middlewares.WoofyOneSpiderMiddleware': 543,
+#    'woofy_one.middlewares.WoofyOneSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'woofy_one_tmp.middlewares.WoofyOneDownloaderMiddleware': 543,
+#    'woofy_one.middlewares.WoofyOneDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'woofy_one_tmp.pipelines.WoofyOnePipeline': 300,
+#    'woofy_one.pipelines.WoofyOnePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -89,3 +89,5 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+FEED_URI_PARAMS = 'woofy_one.utils.uri_params'

@@ -4,7 +4,6 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 import scrapy
 from itemloaders.processors import Join, MapCompose, TakeFirst
-from w3lib.html import remove_tags
 
 
 def remove_whitespace(value):
