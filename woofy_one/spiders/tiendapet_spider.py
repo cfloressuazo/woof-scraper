@@ -44,23 +44,12 @@ class WoofyOneSpider(scrapy.Spider):
         _loader.add_xpath('price', './/@data-priceformat')
         _loader.add_xpath('size_format', './/text()')
 
-        # two = response.selector.xpath('//select[@id="__sku"]/option')
-        # meta_holder = []
-        # for _xp in two:
-        #     _ = {
-        #         'size_format': _xp.xpath('.//text()').get(),
-        #         'price': _xp.xpath('.//@data-priceformat').get(),
-        #     }
-        #     meta_holder.append(_)
-        #
-
         loader.selector = response.selector.xpath('//div[@id="accordion"]/div[@class="panel panel-default"]')
         loader.add_xpath('detail_description', './/div[@id="collapseOne"]/div/descendant-or-self::*/text()')
         loader.add_xpath('detail_ingredients', './/div[@id="collapseTwo"]/div/descendant-or-self::*/text()')
         loader.add_xpath('nutritional_facts', './/div[@id="collapseThree"]/div/descendant-or-self::*/text()')
         loader.add_xpath('nutritional_facts_img_url', './/*[@id="collapseThree"]/div/p/img/@src')
 
-        # _review_loader = loader.nested_xpath('//*[@id="review"]/div/div/div')
         loader.selector = response.selector.xpath('//*[@id="review"]/div/div/div')
         loader.add_xpath('customer_review_header', './/h3[@class="panel-title"]/text()')
         ratings = []
