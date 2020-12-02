@@ -91,3 +91,4 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 FEED_URI_PARAMS = 'woofy_one.utils.uri_params'
+FEED_FROMAT = 'jsonlines'
