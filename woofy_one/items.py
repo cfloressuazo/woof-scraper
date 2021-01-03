@@ -50,6 +50,9 @@ class ProductItem(scrapy.Item):
     nutritional_facts = scrapy.Field()
     nutritional_facts_img_url = scrapy.Field()
 
+    feed_guide = scrapy.Field()
+    feed_guide_img_url = scrapy.Field()
+
     customer_review_header = scrapy.Field(
         input_processor=MapCompose(remove_whitespace),
     )
@@ -58,6 +61,10 @@ class ProductItem(scrapy.Item):
         input_processor=MapCompose(remove_whitespace),
     )
     related_products_url = scrapy.Field()
+
+    # extra information bestforpets
+    extra_information_keys = scrapy.Field()
+    extra_information_values = scrapy.Field()
 
 
 class ProductItemMeta(scrapy.Item):
